@@ -1,0 +1,38 @@
+// .btn-primary:active:not(:disabled):not(.disabled):focus {
+//   background: yellow;
+// }
+
+@mixin b($c1, $c2) {
+  &.active {
+    &:active,
+    &.active,
+    &:focus,
+    &.focus {
+      background-color: $c1;
+    }
+    &:hover {
+      background-color: $c2;
+    }
+  }
+}
+
+.btn-primary {
+  &.btn-na {
+    @include b(#1ac6ff, #00ace6);
+  }
+  &.btn-yes {
+    @include b(#53c68c, #39ac73);
+  }
+  &.btn-no {
+    @include b(#ffb3b3, #ff8080);
+  }
+  &.btn-maybe {
+    @include b(#ffe680, #ffdb4d);
+    &:active,
+    &.active,
+    &:focus,
+    &.focus {
+      color: black;
+    }
+  }
+}
