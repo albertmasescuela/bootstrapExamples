@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faCoffee, faFemale } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,8 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 })
 export class AppComponent implements OnInit {
   public checkboxGroupForm: FormGroup;
-  faCoffee = faCoffee;
+  public faCoffee = faCoffee;
+  public faFemale = faFemale;
 
   constructor(private formBuilder: FormBuilder) {}
 
